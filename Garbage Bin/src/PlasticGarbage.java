@@ -6,7 +6,7 @@ public class PlasticGarbage extends Garbage {
 	public PlasticGarbage(String name, Boolean clean) {
 		super(name);
 		_is_clean = clean;
-		System.out.println("A plastic garbage, named '" + name + "' is just created.");
+		System.out.println("A plastic garbage, named '" + name + "' created.");
 	}
 	
 	public void clean()  {

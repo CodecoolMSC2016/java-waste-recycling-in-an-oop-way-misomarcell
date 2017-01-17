@@ -17,7 +17,7 @@ public class Dustbin {
 	}
 	
 	
-	public void throw_out_garbage(Object garbage)
+	public void throw_out_garbage(Garbage garbage)
 	{
 		if (garbage instanceof PlasticGarbage) 
 		{
@@ -28,7 +28,7 @@ public class Dustbin {
 			}
 			else
 			{
-				System.out.println("Plastic garbage isn't clean");
+				System.out.println(((PlasticGarbage) garbage)._name + " isn't clean");
 			}
 		}
 		else if (garbage instanceof PaperGarbage) 
@@ -36,11 +36,11 @@ public class Dustbin {
 			if (((PaperGarbage) garbage)._is_squeezed == true)
 			{
 				_paper_content.add(garbage);			
-				System.out.println(((PlasticGarbage) garbage)._name + " added to the paper container.");
+				System.out.println(((PaperGarbage) garbage)._name + " added to the paper container.");
 			}
 			else
 			{	
-				System.out.println("Paper garbage isn't squeezed.");
+				System.out.println(((PaperGarbage) garbage)._name + " isn't squeezed.");
 			}
 		}
 		else if (garbage instanceof Garbage &&
@@ -48,7 +48,7 @@ public class Dustbin {
 				(garbage instanceof PlasticGarbage) == false)
 		{
 			_house_waste_content.add(garbage);			
-			System.out.println(((PlasticGarbage) garbage)._name + " added to the house waste container.");	
+			System.out.println(((Garbage) garbage)._name + " added to the house waste container.");	
 		}
 		else
 		{
