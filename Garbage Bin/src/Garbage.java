@@ -1,9 +1,9 @@
-
 public class Garbage {
 
-	public static void main(String[] args) {
-		//teszt
-
+	public String _name;
+	
+	public Garbage(String name) {
+		_name = name;
 	}
 
 }
