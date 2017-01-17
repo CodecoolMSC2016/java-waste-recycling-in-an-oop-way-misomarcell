@@ -12,7 +12,8 @@ public class Dustbin {
 		_paper_content = new ArrayList<Object>();
 		_plastic_content = new ArrayList<Object>();
 		_house_waste_content = new ArrayList<Object>();
-
+		
+		System.out.println("A " + _color + " dustbin just created.");
 	}
 	
 	
@@ -22,7 +23,8 @@ public class Dustbin {
 		{
 			if (((PlasticGarbage) garbage)._is_clean == true)
 			{
-				_plastic_content.add(garbage);
+				_plastic_content.add(garbage);			
+				System.out.println(((PlasticGarbage) garbage)._name + " added to the plastic container.");
 			}
 			else
 			{
@@ -33,7 +35,8 @@ public class Dustbin {
 		{
 			if (((PaperGarbage) garbage)._is_squeezed == true)
 			{
-				_paper_content.add(garbage);
+				_paper_content.add(garbage);			
+				System.out.println(((PlasticGarbage) garbage)._name + " added to the paper container.");
 			}
 			else
 			{	
@@ -44,8 +47,8 @@ public class Dustbin {
 				(garbage instanceof PaperGarbage) == false &&
 				(garbage instanceof PlasticGarbage) == false)
 		{
-			_house_waste_content.add(garbage);
-			
+			_house_waste_content.add(garbage);			
+			System.out.println(((PlasticGarbage) garbage)._name + " added to the house waste container.");	
 		}
 		else
 		{
@@ -59,5 +62,6 @@ public class Dustbin {
 		_paper_content.clear();
 		_plastic_content.clear();
 		_house_waste_content.clear();
+		System.out.println("Dustbin cleared.");
 	}
 }
